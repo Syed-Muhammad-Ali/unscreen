@@ -1,21 +1,23 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
-        <!-- ✅ Camera access -->
+
+<uses-permission android:name="android.permission.INTERNET" />
+
         <uses-permission android:name="android.permission.CAMERA" />
 
-        <!-- ✅ Read and write external storage (for gallery/media files) -->
         <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
         <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     
-        <!-- ✅ For Android 13+ (Scoped storage changes) -->
         <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
         <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
         <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+
     
-        <!-- ✅ Optional: To record video with sound -->
-        <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <application
         android:label="unscreen"
         android:name="${applicationName}"
+         android:usesCleartextTraffic="true"
+    android:hardwareAccelerated="true"
+    android:requestLegacyExternalStorage="true"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

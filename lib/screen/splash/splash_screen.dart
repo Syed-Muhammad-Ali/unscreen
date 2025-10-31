@@ -1,14 +1,31 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:unscreen/screen/home.dart';
 
 class SplashScreen extends StatefulWidget {
-  const SplashScreen({Key? key}) : super(key: key);
+  const SplashScreen({super.key});
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+    Timer(const Duration(seconds: 3), () async {
+      Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => WebViewClass(),
+          ));
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
