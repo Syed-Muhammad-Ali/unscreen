@@ -35,7 +35,7 @@ class _WebViewClassState extends State<WebViewClass> {
       DeviceInfoPlugin deviceInfo = DeviceInfoPlugin();
       AndroidDeviceInfo androidInfo = await deviceInfo.androidInfo;
       if (androidInfo.version.sdkInt >= 33) {
-        permissions.add(Permission.photos);
+        // permissions.add(Permission.photos);
         permissions.add(Permission.videos);
       } else {
         permissions.add(Permission.storage);
