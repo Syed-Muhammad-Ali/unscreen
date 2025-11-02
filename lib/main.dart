@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'UnScreen Bg Remover',
       theme: ThemeData(primarySwatch: Colors.blue),
       home: SplashScreen(),
     );
